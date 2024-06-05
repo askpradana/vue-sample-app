@@ -4,7 +4,7 @@ import emailicon from '@/assets/sendemail.svg'
 import twitterSvg from '@/assets/twitter.svg'
 import instagramSvg from '@/assets/instagram.svg'
 import linkedinSvg from '@/assets/linkedin.svg'
-import SingleCard from './rightcomponents/SingleCardComponents.vue'
+import SingleCard from './helper/SingleCardComponents.vue'
 
 const emailSupport = import.meta.env.VITE_EMAIL_SUPPORT
 const mailTo = 'mailto:' + emailSupport

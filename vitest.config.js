@@ -10,5 +10,15 @@ export default mergeConfig(
       exclude: [...configDefaults.exclude, 'e2e/**'],
       root: fileURLToPath(new URL('./', import.meta.url))
     }
+    // server: {
+    //   cors: true,
+    //   proxy: {
+    //     '/api': {
+    //       target: 'http://localhost:3000',
+    //       changeOrigin: true,
+    //       rewrite: (path) => path.replace(/^\/api/, '')
+    //     }
+    //   }
+    // }
   })
 )

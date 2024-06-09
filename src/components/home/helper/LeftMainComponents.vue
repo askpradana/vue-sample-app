@@ -1,4 +1,8 @@
 <script setup>
+import Button from '@/components/ui/button/Button.vue'
+import { Input } from '@/components/ui/input'
+import { Label } from '@/components/ui/label'
+
 import { ref } from 'vue'
 
 const urlUpload = import.meta.env.VITE_URL_UPLOAD
@@ -46,14 +50,15 @@ function uploadImg() {
 <template>
   <section>
     <div v-if="!image">
-      <p>Watermark</p>
-      <input type="file" accept="image/*" @change="handleFileChange" />
+      <h2 class="text-3xl font-semibold tracking-tight transition-colors mb-4">Watermark</h2>
+      <Label for="file">Please upload picture format only</Label>
+      <Input id="file" type="file" accept="image/*" @change="handleFileChange" />
     </div>
     <div v-if="image" class="flex flex-col gap-4">
       <img :src="image" alt="Selected Image" />
-      <input type="text" v-model="text" placeholder="Watermark text" />
-      <button @click="image = ''">Remove image</button>
-      <button @click="uploadImg">Upload</button>
+      <Input type="text" v-model="text" placeholder="Watermark text" />
+      <Button @click="image = ''">Remove image</Button>
+      <Button @click="uploadImg">Upload</Button>
     </div>
   </section>
 </template>

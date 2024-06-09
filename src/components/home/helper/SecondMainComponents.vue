@@ -1,13 +1,22 @@
 <script setup>
+import Input from '@/components/ui/input/Input.vue'
 import Button from '../../ui/button/Button.vue'
-import { Play } from 'lucide-vue-next'
+import { fetchInstagramStore } from '@/stores/fetchInstagram'
+
+const store = fetchInstagramStore()
 </script>
 
 <template>
-  <section>
-    <p>Kedua</p>
-    <Button variant="link" class="flex justify-start"
-      ><Play class="w-4 h-4 mr-2" /> Take the test</Button
-    >
+  <section v-if="store.isLoading">Loading...</section>
+
+  <section v-else-if="!store.isLoading && !store.downloadLink == ''">
+    <Button v-if="store.downloadLink" @click="store.downloadVideo">Download Video</Button>
+    <Button @click="store.downloadAnotherVideo"> Download another </Button>
+  </section>
+
+  <section v-else>
+    <p>Instagram reels downloader</p>
+    <Input type="text" placeholder="Instagram link" v-model="store.url" />
+    <Button @click="store.fetchInstagram"> Download </Button>
   </section>
 </template>

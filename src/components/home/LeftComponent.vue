@@ -2,14 +2,18 @@
 import { computed } from 'vue'
 import LeftCardBorder from './helper/LeftCardBorder.vue'
 import { randomUserStore } from '@/stores/randomuser'
+import { fetchWeatherStore } from '@/stores/fetchWeather'
 import LeftMainCard from './helper/LeftMainCard.vue'
-const store = randomUserStore()
+const userStore = randomUserStore()
+const weatherStore = fetchWeatherStore()
 
 const ownerName = import.meta.env.VITE_NAME
 
-store.fetchUsers()
+userStore.fetchUsers()
+weatherStore.fetchWeather()
 
-const profilePhoto = computed(() => store.getProfilePict)
+const profilePhoto = computed(() => userStore.getProfilePict)
+const weatherIcon = computed(() => weatherStore.getData.icon)
 </script>
 
 <template>
@@ -18,9 +22,9 @@ const profilePhoto = computed(() => store.getProfilePict)
       <LeftCardBorder class="w-1/2">
         <div class="w-full flex flex-col items-end pr-6">
           <p>Bekasi</p>
-          <div class="flex flex-row gap-4">
-            <p>01:11</p>
-            <p>12º C</p>
+          <div class="flex flex-row gap-2 items-center">
+            <p>{{ weatherStore.getData.condition }}</p>
+            <img v-bind:src="'data:image/jpeg;base64,' + weatherIcon" class="w-8" />
           </div>
         </div>
       </LeftCardBorder>

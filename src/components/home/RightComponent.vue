@@ -35,16 +35,24 @@ const dateNow = new Date().getFullYear()
 
     <Card class="w-full">
       <CardHeader>
-        <!-- <Card
-          class="flex flex-row justify-between px-4 py-2 rounded-t-md rounded-b-none group cursor-pointer hover:scale-105 ease-in-out duration-75"
-        >
-          <p class="text-slate-400 group-hover:text-black">Twitter</p>
-          <img :src="twitterSvg" class="group-hover:hidden block" />
-          <p class="group-hover:block hidden">Mini-blog</p>
-        </Card> -->
-        <SingleCard title="Twitter" :imageSvg="twitterSvg" subTitle="Mini-blog" />
-        <SingleCard title="Instagram" :imageSvg="instagramSvg" subTitle="Gallery archive" />
-        <SingleCard title="LinkedIn" :imageSvg="linkedinSvg" subTitle="Professional" />
+        <SingleCard
+          title="Twitter"
+          :imageSvg="twitterSvg"
+          subTitle="Mini-blog"
+          href="https://twitter.com/"
+        />
+        <SingleCard
+          title="Instagram"
+          :imageSvg="instagramSvg"
+          subTitle="Gallery archive"
+          href="https://instagram.com"
+        />
+        <SingleCard
+          title="LinkedIn"
+          :imageSvg="linkedinSvg"
+          subTitle="Professional"
+          href="https://linkedin.com"
+        />
         <Card
           class="flex flex-row justify-center px-4 py-2 rounded-t-none rounded-b-md text-slate-400 cursor-default hover:scale-105 ease-in-out duration-75"
         >

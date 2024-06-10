@@ -13,7 +13,7 @@ const dateNow = new Date().getFullYear()
 
 <template>
   <section class="flex flex-col gap-4 items-end mb-4 sm:mb-0">
-    <Card>
+    <Card class="group hover:scale-105 ease-in-out duration-200">
       <CardHeader>
         <CardTitle>Hey, I'm software engineer that build this web apps for fun</CardTitle>
       </CardHeader>
@@ -23,7 +23,7 @@ const dateNow = new Date().getFullYear()
       </CardContent>
     </Card>
 
-    <Card class="w-fit">
+    <Card class="w-fit group hover:scale-105 ease-in-out duration-200">
       <CardHeader>
         <a v-bind="{ href: mailTo }">
           <CardTitle class="bg-slate-100 w-fit py-2 px-4 flex flex-wrap gap-4 justify-end">

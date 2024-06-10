@@ -19,7 +19,7 @@ const weatherIcon = computed(() => weatherStore.getData.icon)
 <template>
   <main class="flex flex-col gap-4">
     <section class="flex flex-row gap-4 justify-between">
-      <LeftCardBorder class="w-1/2">
+      <LeftCardBorder class="w-1/2 group hover:scale-105 ease-in-out duration-200">
         <div class="w-full flex flex-col items-end pr-6">
           <p>Bekasi</p>
           <div class="flex flex-row gap-2 items-center">
@@ -29,11 +29,13 @@ const weatherIcon = computed(() => weatherStore.getData.icon)
         </div>
       </LeftCardBorder>
 
-      <LeftCardBorder class="sm:w-1/3 w-full hidden sm:block">
+      <LeftCardBorder
+        class="sm:w-1/3 w-full hidden sm:block group hover:scale-105 ease-in-out duration-200"
+      >
         <p>{{ ownerName }}</p>
       </LeftCardBorder>
 
-      <LeftCardBorder class="w-auto">
+      <LeftCardBorder class="w-auto group hover:scale-105 ease-in-out duration-200">
         <img :src="profilePhoto" alt="haha" />
       </LeftCardBorder>
     </section>
@@ -41,7 +43,7 @@ const weatherIcon = computed(() => weatherStore.getData.icon)
     <LeftMainCard />
 
     <section>
-      <LeftCardBorder>
+      <LeftCardBorder class="group hover:scale-105 ease-in-out duration-200">
         <p class="text-slate-400">Sponsor, anyone?</p>
       </LeftCardBorder>
     </section>

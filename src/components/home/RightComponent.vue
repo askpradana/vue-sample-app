@@ -12,7 +12,7 @@ const dateNow = new Date().getFullYear()
 </script>
 
 <template>
-  <section class="flex flex-col gap-4 items-end">
+  <section class="flex flex-col gap-4 items-end mb-4 sm:mb-0">
     <Card>
       <CardHeader>
         <CardTitle>Hey, I'm software engineer that build this web apps for fun</CardTitle>

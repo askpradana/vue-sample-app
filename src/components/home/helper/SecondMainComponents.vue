@@ -15,7 +15,7 @@ const store = fetchInstagramStore()
   </section>
 
   <section v-else>
-    <p class="text-3xl font-semibold tracking-tight transition-colors mb-4">
+    <p class="sm:text-3xl text-base font-semibold tracking-tight transition-colors mb-4">
       Instagram reels downloader
     </p>
     <Input type="text" placeholder="Instagram link" v-model="store.url" class="mb-4" />

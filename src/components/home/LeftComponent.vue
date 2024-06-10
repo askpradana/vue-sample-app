@@ -29,7 +29,7 @@ const weatherIcon = computed(() => weatherStore.getData.icon)
         </div>
       </LeftCardBorder>
 
-      <LeftCardBorder class="w-1/3">
+      <LeftCardBorder class="sm:w-1/3 w-full hidden sm:block">
         <p>{{ ownerName }}</p>
       </LeftCardBorder>
 
@@ -38,8 +38,8 @@ const weatherIcon = computed(() => weatherStore.getData.icon)
       </LeftCardBorder>
     </section>
 
-    <section class="flex flex-auto"></section>
     <LeftMainCard />
+
     <section>
       <LeftCardBorder>
         <p class="text-slate-400">Sponsor, anyone?</p>

@@ -50,7 +50,9 @@ function uploadImg() {
 <template>
   <section>
     <div v-if="!image">
-      <h2 class="text-3xl font-semibold tracking-tight transition-colors mb-4">Watermark</h2>
+      <h2 class="sm:text-3xl text-xl font-semibold tracking-tight transition-colors mb-4">
+        Watermark
+      </h2>
       <Label for="file">Please upload picture format only</Label>
       <Input id="file" type="file" accept="image/*" @change="handleFileChange" />
     </div>

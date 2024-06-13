@@ -8,7 +8,7 @@ import { RouterView } from 'vue-router'
   <LeftCardBorder class="sm:h-full h-[300px] w-full group">
     <div class="flex flex-row justify-between w-full h-full">
       <div class="flex flex-col w-full justify-end p-4 gap-4">
-        <RouterView />
+        <RouterView></RouterView>
       </div>
 
       <div

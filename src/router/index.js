@@ -1,5 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import LeftFirst from '../components/home/helper/LeftMainComponents.vue'
+import LeftSecond from '../components/home/helper/SecondMainComponents.vue'
+import LeftThird from '../components/home/helper/ThirdMainComponents.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -13,15 +16,15 @@ const router = createRouter({
           // UserProfile will be rendered inside User's <router-view>
           // when /user/:id/profile is matched
           path: 'left',
-          component: import('../components/home/helper/LeftMainComponents.vue')
+          component: LeftFirst
         },
         {
           path: 'kedua',
-          component: import('../components/home/helper/SecondMainComponents.vue')
+          component: LeftSecond
         },
         {
           path: 'ketiga',
-          component: import('../components/home/helper/ThirdMainComponents.vue')
+          component: LeftThird
         }
       ]
     }

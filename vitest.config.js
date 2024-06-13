@@ -10,7 +10,7 @@ export default mergeConfig(
       exclude: [...configDefaults.exclude, 'e2e/**'],
       root: fileURLToPath(new URL('./', import.meta.url))
     },
-    base: '/vue-sample-app/'
+    base: '/vue-sample-app'
     // server: {
     //   cors: true,
     //   proxy: {

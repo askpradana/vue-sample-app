@@ -25,7 +25,7 @@ function uploadImg() {
   }
 
   const formData = new FormData()
-  formData.append('image', imageFile.value) // Append the actual file object
+  formData.append('image', imageFile.value)
   formData.append('text', text.value)
 
   fetch(urlUpload, {
@@ -43,7 +43,9 @@ function uploadImg() {
       a.click()
       window.URL.revokeObjectURL(url)
     })
-    .catch((error) => console.error('Error:', error))
+    .catch(() => {
+      alert('try again later, my backend probably down right now')
+    })
 }
 </script>
 

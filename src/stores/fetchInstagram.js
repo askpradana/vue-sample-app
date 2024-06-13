@@ -17,10 +17,12 @@ export const fetchInstagramStore = defineStore('fetchInstagram', {
       this.isLoading = true
       if (!this.url) {
         alert('Please enter a valid URL')
+        this.isLoading = false
         return
       }
-      if (!this.url.includes('instagram.com/reel/')) {
+      if (!this.url.includes('instagram.com/')) {
         alert('Please enter a valid Instagram Url')
+        this.isLoading = false
         return
       }
 

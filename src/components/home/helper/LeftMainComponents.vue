@@ -24,6 +24,11 @@ function uploadImg() {
     return
   }
 
+  if (!text.value) {
+    alert('Please input watermark text')
+    return
+  }
+
   const formData = new FormData()
   formData.append('image', imageFile.value)
   formData.append('text', text.value)
